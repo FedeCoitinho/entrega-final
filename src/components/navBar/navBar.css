@@ -1,0 +1,14 @@
+/* NavBar.css */
+nav {
+    background-color: #333;
+    color: rgb(236, 5, 5);
+    padding: 10px;
+  }
+
+nav ul {display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+  
+
+  
