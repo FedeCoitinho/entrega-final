@@ -2,16 +2,26 @@ import { useState } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import NavBar from './components/NavBar/navbar';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
+
+
+
+
 function App() {
 
   return (
-    <div>
-    
-    <NavBar/>
-    <ItemListContainer Elemento="Aca van a ir los articulos"/>
+    <BrowserRouter>
+      <NavBar/>
 
-    </div>   
-    
+        <Routes>
+            <Route path ="/" element={<ItemListContainer/>}/>
+            <Route path="/item/:id" element={<ItemDetailContainer/> }/>
+            <Route path="/productos/:category" element={<ItemListContainer/> }/>
+        </Routes>
+
+    </BrowserRouter>
     
   );
 }
