@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
-function CarWidget({ itemCount }) {
+const CarWidget  = () => {
+  
+const {cantCarrito} = useContext(CartContext);
+
   return (
     <div className="car-widget">
-      <i className="fas fa-shopping-cart"></i>
-      <span className="item-count">{itemCount}</span>
+      <Link to="/carrito" className="fas fa-shopping-cart">
+
+        <span> {cantCarrito()}</span>
+
+      </Link>
+
+    
     </div>
   );
 }
