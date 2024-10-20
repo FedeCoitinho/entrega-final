@@ -10,7 +10,8 @@ const Carrito = () => {
           <h1>Carrito de Compras</h1>
           {carrito.map((prod) => (
             <div key={prod.id}>
-              <img src={item.image} alt="item.product_name" />
+              <img src={prod.image} alt="prod.product_name" />
+              
               <div>
               <h2>{prod.product_name}</h2>
               <p>Precio por unidad: ${prod.price}</p>
