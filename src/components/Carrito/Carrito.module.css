@@ -1,0 +1,31 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+}
+
+
+.carritoContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}

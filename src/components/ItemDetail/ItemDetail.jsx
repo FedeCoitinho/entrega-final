@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import ItemCount from "../ItemCount.jsx/ItemCount"
 import { CartContext } from "../context/CartContext"
 import Item from "../Item/Item";
+import styles from "./itemDetail.module.css"
 
 
 const ItemDetail = ({item}) => {
@@ -19,29 +20,25 @@ const ItemDetail = ({item}) => {
         setCantidad(cantidad + 1)
 
     }
-   
-
 
 
     return (
-        <div>
-            <div>
-                <img src={item.image} alt="item.product_name" />
-                <div>
-                    <h3>{item.product_name}</h3>
-                    <p>{item.description}</p>
-                    <p>Categoria: {item.category}</p>
-                    <p> Precio: ${item.price}</p>
-                    <ItemCount 
+        <div className={styles.itemDetailContainer}>
+            <img src={item.image} alt={item.product_name} className={styles.itemImage} />
+            <div className={styles.itemDetails}>
+                <h3>{item.product_name}</h3>
+                <p>{item.description}</p>
+                <p>Categoría: {item.category}</p>
+                <p>Precio: ${item.price}</p>
+                <ItemCount 
                     cantidad={cantidad} 
                     handleSumar={handleSumar} 
                     handleRestar={handleRestar} 
-                    handleAgregar={() => agregarAlCarrito (item, cantidad)}/>
-                </div>
-
+                    handleAgregar={() => agregarAlCarrito(item, cantidad)} 
+                />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ItemDetail
+export default ItemDetail;

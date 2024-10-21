@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import NavBar from './components/NavBar/navbar';
+import NavBar from './components/navBar/navbar';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';

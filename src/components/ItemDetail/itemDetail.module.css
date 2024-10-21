@@ -1,0 +1,30 @@
+.itemDetailContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.itemImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemDetails h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.itemDetails p {
+    margin: 10px 0;
+}
